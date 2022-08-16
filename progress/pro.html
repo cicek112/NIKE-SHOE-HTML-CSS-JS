@@ -1,0 +1,152 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="top">
+            <div class="logo"><img src="./gt/img/sneakers.png" alt=""></div>
+
+            <div class="search">
+                <input type="text" class="search-input" placeholder="Search...">
+                <img  class="büyütec" src="./gt/img/search.png" alt="" width="20" height="20">
+            </div>
+
+            <div class="offer">
+                <span>Limited Offer!!</span>
+            </div>
+        </div>
+        <div class="down" onclick="add()" status="active"> <i class="fa-solid fa-angles-down fa-2x"></i></div>
+        <div class="bottom">
+            <h3 class="menuİtem" onclick="first(0)" >Jordan</h3>
+            <h3 class="menuİtem" onclick="first(-100)">Blazer</h3>
+            <h3 class="menuİtem" onclick="first(-200)" >Hıppe</h3>
+            <h3 class="menuİtem"onclick="first(-300)" >Crater</h3>
+            <h3 class="menuİtem"onclick="first(-400)" >Aır force</h3>
+        </div> 
+    </nav>
+
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="./gt/img/jordan.png" alt="" class="sliderImg">
+               
+                <h1 class="title">AIR JORDAN <br> NEW <br> SEASON</h1>
+                <h2 class="price">119$</h2>
+               
+            </div>
+
+            <div class="sliderItem">
+                <img src="./gt/img/blazer.png" alt="" class="sliderImg">
+                <h1 class="title">BLAZER <br> NEW <br> SEASON</h1>
+                <h2 class="price">139$</h2>
+            </div>
+
+            <div class="sliderItem">
+                <img src="./gt/img/hippie.png" alt="" class="sliderImg">
+                <h1 class="title">HIPPIE <br> NEW <br> SEASON</h1>
+                <h2 class="price">99$</h2>
+            </div>
+
+            <div class="sliderItem">
+                <img src="./gt/img/crater.png" alt="" class="sliderImg">
+                <h1 class="title">CRATER <br> NEW <br> SEASON</h1>
+                <h2 class="price">109$</h2>
+            </div>
+
+            <div class="sliderItem">
+                <img src="./gt/img/air.png" alt="" class="sliderImg">
+                <h1 class="title">AIR FORCE <br> NEW <br> SEASON</h1>
+                <h2 class="price">129$</h2>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <div class="features">  
+        <div class="fea1">
+            <img class="fea-img" src="./gt/img/shipping.png" alt="" width="50px">
+            <h4 class="fea-head">FREE SHIPPING</h4>
+            <p class="fea-text">Free worldwide shipping on all orders</p>
+        </div>
+
+        <div class="fea1">
+            <img class="fea-img" src="./gt/img/return.png " alt="" width="50px">
+            <h4 class="fea-head">30 DAYS RETURN</h4>
+            <p class="fea-text">Free worldwide shipping on all orders</p>
+        </div>
+
+        <div class="fea1">
+            <img class="fea-img" src="./gt/img/gift.png" alt="" width="50px">
+            <h4 class="fea-head">GIFT CARDS</h4>
+            <p class="fea-text">Free worldwide shipping on all orders</p>
+        </div>
+
+        <div class="fea1">
+            <img class="fea-img" src="./gt/img/contact.png" alt="" width="50px">
+            <h4 class="fea-head">CONTACT US</h4>
+            <p class="fea-text">Free worldwide shipping on all orders</p>
+        </div>
+    </div> 
+
+  
+
+
+    <script>
+            
+      
+
+        const wrapper =document.querySelector(".sliderWrapper");
+        
+        
+        function first(yasin){
+            
+            wrapper.style.transform = "translateX("+ yasin+"vw)";
+        }
+
+
+
+        function add(){
+
+            shoes =document.querySelector(".bottom");
+            bilgecanDede = document.querySelector(".down");
+
+            shoes.classList.toggle('active');
+
+            if(bilgecanDede.getAttribute("status") == "active"){
+                bilgecanDede.innerHTML = "<i class='fa-solid fa-angles-up fa-2x'></i>";
+                bilgecanDede.setAttribute("status", "disable")
+            }
+            else{
+                bilgecanDede.innerHTML = "<i class='fa-solid fa-angles-down fa-2x'></i>";
+                bilgecanDede.setAttribute("status", "active")
+            }
+        }
+
+
+
+        
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
